@@ -13,6 +13,7 @@ import {
 } from "./controllers/auth.js";
 
 import authCheck from "./middleware/authMiddleware.js";
+import { createCourse, getCourse } from "./controllers/course.js";
 
 const app = express();
 app.use(express.json());
@@ -34,13 +35,17 @@ app.get("/health", (req, res) => {
     message: "Server is running",
   });
 });
-
+// User API
 app.post("/register", postUser);
 app.post("/login", postLogin);
 app.get("/users", getUsers);
 app.get("/user/:userId", authCheck, getUserById);
 app.put("/user/:userId", authCheck, updateUser);
 app.delete("/user/:userId", deleteUser);
+
+// Course API
+app.get("/courses/:courseId", getCourse);
+app.post("/courses", authCheck , createCourse);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
