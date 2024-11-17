@@ -1,5 +1,47 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    min-height: 100vh;
+  }
+
+  .auth-container{
+    background-color: #fff;
+    text-align: center;
+    margin-top: 5%;
+    padding: 10px;
+  }
+
+  .auth-heading{
+    font-size: 30px;
+    margin: 10px;
+    color: #4CAF50;
+  }
+
+  .auth-form-container{
+    padding: 10px;
+  }
+
+  .auth-input{
+    width: 50%;
+    padding: 10px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+  }
+
+  .auth-input:focus , .auth-input:active{
+    outline: none
+
+  }
+
+  .auth-btn{
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
   }
