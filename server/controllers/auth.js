@@ -84,7 +84,6 @@ const getUsers = async (req, res) => {
 const getUserById = async (req, res) => {
   const { userId } = req.params;
 
-
   if (!mongoose.isValidObjectId(userId)) {
     return res.status(400).json({ message: "Invalid user ID format" });
   }
@@ -94,13 +93,19 @@ const getUserById = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
+    console.log(user);
+    
 
-    res.json(user);
+    res.json({
+      message: "User profile retrieved successfully",
+      data: user,
+    });
   } catch (error) {
     console.error("Error fetching user:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
+
 const updateUser = async (req, res) => {
   const { userId } = req.params;
   const { skills , bio } = req.body;

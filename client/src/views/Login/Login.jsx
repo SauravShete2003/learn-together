@@ -11,6 +11,7 @@ function Login() {
       const response = await api.post("/login", { email, password });
       if (response) {
         toast.success(response.data.message);
+        
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
         setTimeout(() => {
@@ -47,8 +48,8 @@ function Login() {
         <button type="button" className="auth-btn" onClick={handleLogin}>
           Sign In
         </button>
-        <div>
-          Don't have an account? <Link to="/signup">Sign up</Link>
+        <div className="auth-links">
+          Don't have an account? <Link to="/signup"  style={{textDecoration : "none"}}>Sign up</Link>
         </div>
       </div>
     </div>

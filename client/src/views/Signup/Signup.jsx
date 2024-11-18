@@ -52,13 +52,15 @@ function Signup() {
           value={formData.password}
           placeholder="Enter Your Password"
           onChange={(e) =>
-            setFromData({ ...formData, password: e.target.value })} />
+            setFromData({ ...formData, password: e.target.value })
+          }
+        />
 
         <button type="button" className="auth-btn" onClick={handleSubmit}>
           Register
         </button>
-        <div>
-          Already have an account? <Link to={'/login'}>Login</Link> 
+        <div className="auth-links">
+          Already have an account? <Link to={"/login"} style={{textDecoration : "none"}}>Login</Link>
         </div>
       </div>
     </div>

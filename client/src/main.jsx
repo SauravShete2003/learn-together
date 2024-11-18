@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Home from "./views/Home/Home";
 import Signup from "./views/Signup/Signup";
 import Login from "./views/Login/Login";
+
 const root = createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {

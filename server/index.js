@@ -39,7 +39,7 @@ app.get("/health", (req, res) => {
 app.post("/register", postUser);
 app.post("/login", postLogin);
 app.get("/users", getUsers);
-app.get("/user/:userId", authCheck, getUserById);
+app.get("/users/:userId", authCheck, getUserById);
 app.put("/user/:userId", authCheck, updateUser);
 app.delete("/user/:userId", deleteUser);
 

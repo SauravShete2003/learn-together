@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Profile from "../Profile/Profile";
+import LogOut from "../../components/LogOut/LogOut";
 
 function Home() {
   return (
     <div>
-      <h1>Welcome Home</h1>
+      <LogOut />
+      <Profile />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
