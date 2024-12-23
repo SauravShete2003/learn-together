@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Home from "./views/Home/Home";
 import Signup from "./views/Signup/Signup";
 import Login from "./views/Login/Login";
+import Profile from "./views/Profile/Profile";
 
 const root = createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "/profile",
+    element: <Profile/>
+  },
+  {
+    path: "*",
+    element: <div>Page not found</div>
+  }
 ]);
 
 root.render(

@@ -107,10 +107,10 @@ const getUserById = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-  const { userId } = req.params;
+  const { id } = req.params;
   const { skills , bio } = req.body;
   const user = await User.findByIdAndUpdate(
-    userId,
+    id,
     { skills , bio },
     { new: true }
   );

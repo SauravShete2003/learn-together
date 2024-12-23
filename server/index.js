@@ -40,7 +40,7 @@ app.post("/register", postUser);
 app.post("/login", postLogin);
 app.get("/users", getUsers);
 app.get("/users/:userId", authCheck, getUserById);
-app.put("/user/:userId", authCheck, updateUser);
+app.put("/user/:id", authCheck, updateUser);
 app.delete("/user/:userId", deleteUser);
 
 // Course API
